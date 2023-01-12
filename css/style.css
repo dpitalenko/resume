@@ -48,6 +48,10 @@ a:active {
   position: relative;
 }
 
+.photo_non-click {
+  pointer-events: none;
+}
+
 .photo::before {
   content: "";
   position: absolute;
@@ -163,12 +167,30 @@ a:active {
 
 .burger__list {
   position: absolute;
+  z-index: 10;
   top: 0;
   left: 0;
   display: none;
   width: 200px;
   padding: 30px 60px 31px 50px;
   background: var(--grey-bg-color);
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+  animation: appear 1s;
+}
+
+@keyframes appear {
+  from {
+    left: -310px;
+    opacity: 0;
+  } 
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+.burger__list_visible {
+  display: block;
 }
 
 .burger__item {
@@ -193,10 +215,14 @@ a:active {
   cursor: pointer;
 }
 
+.burger__close_visible {
+  display: block;
+}
+
 .burger__closeline {
   position: absolute;
-  top: 30px;
-  left: 250px;
+  top: 0;
+  left: 210px;
   width: 30px;
   height: 2px;
   border-radius: 20px;
@@ -204,8 +230,16 @@ a:active {
   transform: rotate(45deg);
 }
 
+.burger__close:hover .burger__closeline {
+  background: var(--green-bg-color);
+}
+
 .burger__closeline_inverse {
   transform: rotate(-45deg);
+}
+
+.remove-scroll {
+  overflow: hidden;
 }
 
 .person {
