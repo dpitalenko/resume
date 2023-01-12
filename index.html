@@ -5,8 +5,75 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV Diana Pitalenko</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Sofia+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://kit.fontawesome.com/73b529f8f2.js" crossorigin="anonymous"></script>
+  <script defer src="./js/main.js"></script>
 </head>
 <body>
-  
+  <header class="header">
+    <div class="wrap">
+      <div class="container">
+        <div class="photo">
+          <img class="photo__item" src="./assets/diana-pitalenko.png" alt="Diana Pitalenko">
+          <i class="fa fa-chevron-left photo__arrow photo__left"></i>
+          <i class="fa fa-chevron-right photo__arrow photo__right"></i>
+          <div class="dot">
+            <span class="dot__item dot__item_active" onclick="currentSlide(1)"></span> 
+            <span class="dot__item" onclick="currentSlide(2)"></span> 
+            <span class="dot__item" onclick="currentSlide(3)"></span> 
+          </div>
+        </div>
+        <div class="burger">
+          <div class="burger__menu">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+          </div>
+          <ul class="burger__list">
+            <li class="burger__item">
+              <a class="burger__link" href="#">About myself</a>
+            </li>
+            <li class="burger__item">
+              <a class="burger__link" href="#">Education</a>
+            </li>
+            <li class="burger__item">
+              <a class="burger__link" href="#">Experience</a>
+            </li>
+          </ul>
+          <div class="burger__close">
+            <div class="burger__closeline"></div>
+            <div class="burger__closeline burger__closeline_inverse"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="person">
+      <div class="container">
+        <h1 class="person__name">Diana Pitalenko</h1>
+        <p class="person__position">
+          Junior Frontend Developer
+        </p>
+      </div>
+      
+    </div>
+  </header>
+  <main class="main">
+    
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="copyright">
+        <span class="copyright__year">
+          © 2023 Created by
+        </span>
+        <a class="copyright__name" href="https://github.com/dpitalenko">
+          dpitalenko
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

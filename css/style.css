@@ -1,0 +1,267 @@
+:root {
+  --main-font: 'Inter', sans-serif;
+  --title-font: 'Sofia Sans', sans-serif;
+  --white-color: #ffffff;
+  --green-bg-color: #cde2a5;
+  --grey-bg-color: #474747;
+}
+
+body {
+  margin: 0;
+  font-family: var(--main-font);
+  font-size: 16px;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:hover,
+a:active {
+  font-family: var(--main-font);
+  color: var(--white-color);
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.wrap {
+  padding: 30px 0;
+  background-image: linear-gradient(var(--green-bg-color) 50%,transparent  50%);
+}
+
+.photo {
+  position: relative;
+}
+
+.photo::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 72.5px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 310px;
+  height: 155px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0; 
+  background: var(--grey-bg-color);
+}
+
+.photo::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 227.5px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 310px;
+  height: 155px;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  background: var(--green-bg-color);
+}
+
+.photo__item {
+  position: relative;
+  z-index: 10;
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.photo__arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+  font-size: 25px;
+  color: var(--grey-bg-color);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.photo__left {
+  left: 32%;
+  padding: 6px 3px 6px 9px;
+}
+
+.photo__right {
+  right: 32%;
+  padding: 6px 1px 6px 11px;
+}
+
+.photo__left:hover,
+.photo__right:hover {
+  color: var(--white-color);
+  background: var(--grey-bg-color);
+}
+
+.dot {
+  position: absolute;
+  top: 320px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.dot__item {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot__item_active,
+.dot__item:hover {
+  background-color: #717171;
+}
+
+.burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.burger__menu {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  cursor: pointer;
+}
+
+.burger__line {
+  width: 30px;
+  height: 3px;
+  margin-bottom: 7px;
+  border-radius: 20px;
+  background: var(--grey-bg-color);
+}
+
+.burger__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 200px;
+  padding: 30px 60px 31px 50px;
+  background: var(--grey-bg-color);
+}
+
+.burger__item {
+  margin-bottom: 15px;
+}
+
+.burger__link {
+  font-size: 20px;
+}
+
+.burger__link:hover {
+  color: var(--green-bg-color);
+}
+
+.burger__link:active {
+  text-decoration: underline;
+}
+
+.burger__close {
+  position: absolute;
+  display: none;
+  cursor: pointer;
+}
+
+.burger__closeline {
+  position: absolute;
+  top: 30px;
+  left: 250px;
+  width: 30px;
+  height: 2px;
+  border-radius: 20px;
+  background: var(--white-color);
+  transform: rotate(45deg);
+}
+
+.burger__closeline_inverse {
+  transform: rotate(-45deg);
+}
+
+.person {
+  margin-top: 20px;
+  padding: 15px 0;
+  background: var( --grey-bg-color);
+  text-align: center;
+}
+
+.person__name {
+  margin: 0 0 10px;
+  font-family: var(--title-font);
+  font-size: 50px;
+  color: var(--white-color);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.person__position {
+  font-family: var(--main-font);
+  font-size: 20px;
+  color: var(--white-color);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+main {
+  height: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  padding: 30px 0;
+  background: var(--grey-bg-color);
+  text-align: center;
+}
+
+.copyright__year {
+  color: var(--white-color);
+}
+
+.copyright__name {
+  color: var(--green-bg-color);
+  
+}
+
+.copyright__name:active {
+  text-decoration: underline;
+}
