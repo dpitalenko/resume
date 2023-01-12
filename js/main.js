@@ -1,5 +1,6 @@
 const burgerMenu = document.querySelector(".burger__menu");
 const burgerList = document.querySelector(".burger__list");
+const burgerListLinks = document.querySelectorAll(".burger__list .burger__link");
 const burgerCloseBtn = document.querySelector(".burger__close");
 const photoBlock = document.querySelector(".photo");
 const body = document.querySelector("#body");
@@ -20,6 +21,13 @@ burgerMenu.addEventListener("click", function (e) {
   e.stopPropagation();
   toggleMenu();
 });
+
+burgerListLinks.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.stopPropagation();
+    toggleMenu();
+  });
+})
 
 document.addEventListener("click", function (e) {
   const target = e.target;

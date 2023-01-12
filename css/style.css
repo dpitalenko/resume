@@ -6,10 +6,14 @@
   --grey-bg-color: #474747;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: var(--main-font);
-  font-size: 16px;
+  font-size: 18px;
 }
 
 p {
@@ -39,9 +43,17 @@ a:active {
   margin: 0 auto;
 }
 
+.title {
+  position: relative;
+  font-family: var(--title-font);
+  font-size: 40px;
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
 .wrap {
   padding: 30px 0;
-  background-image: linear-gradient(var(--green-bg-color) 50%,transparent  50%);
+  background: linear-gradient(var(--green-bg-color) 50%, transparent 50%);
 }
 
 .photo {
@@ -136,7 +148,7 @@ a:active {
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: all 0.5s ease;
 }
 
 .dot__item_active,
@@ -266,20 +278,217 @@ a:active {
   letter-spacing: 0.3em;
 }
 
-main {
-  height: 500px;
+.main {
+  background: linear-gradient(90deg, transparent 80%, var(--green-bg-color) 20%);
 }
 
+.info {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: 40px;
+}
 
+.general {
+  padding: 50px 0;
+}
 
+.title_gen {
+  padding: 5px 0;
+  color: var(--grey-bg-color);
+}
 
+.title_gen::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -500px;
+  width: 1000px;
+  height: 58px;
+  border-radius: 0 50px 50px 0;
+  background: var(--green-bg-color);
+}
 
+.about__text {
+  line-height: 1.7em;
+}
 
+.educ__type {
+  margin-bottom: 50px;
+}
 
+.educ__title {
+  font-size: 25px;
+}
 
+.educ__text {
+  display: flex;
+}
 
+.educ__list {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 25px;
+}
 
+.educ__list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  border-radius: 100px;
+  background: #cde2a5;
+}
 
+.educ__item {
+  margin-bottom: 10px;
+}
+
+.educ__item:first-child {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.work__type {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.work__type:first-child {
+  margin-bottom: 30px;
+}
+
+.work__time {
+  display: flex;
+  align-items: center;
+  width: 300px;
+}
+
+.work__dot {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+  border-radius: 100px;
+  background: var(--green-bg-color);
+}
+
+.work__year {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.work__name {
+  width: 450px;
+}
+
+.work__item {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.work__item_pos{
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.work__item_desc {
+  line-height: 1.7em;
+}
+
+.additional {
+  padding: 50px 0;
+  background: var(--green-bg-color);
+}
+
+.title_add {
+  width: 300px;
+  padding: 5px 5px 5px 30px;
+  border-radius: 0 50px 50px 0;
+  background: var(--grey-bg-color);
+}
+
+.skills__list {
+  margin-left: 30px;
+}
+
+.skills__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.skills__icon {
+  font-size: 15px;
+  color: var(--white-color);
+}
+
+.skills__text {
+  margin-left: 10px;
+  font-size: 20px;
+  color: var(--grey-bg-color);
+}
+
+.language__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.language__dot {
+  display: block;
+  width: 11px;
+  height: 11px;
+  margin: 0 10px 0 30px;
+  border: 3px solid var(--white-color);
+  border-radius: 100px;
+}
+
+.language__icon {
+  margin: 0 10px 0 30px;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+.language__text {
+  font-size: 20px;
+  color: var(--grey-bg-color);
+}
+
+.con-list {
+  margin-left: 30px;
+}
+
+.con-list__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.con-list__icon {
+  font-size: 21px;
+  color: var(--white-color);
+}
+
+.con-list__value {
+  margin-left: 10px;
+  font-size: 20px;
+  color: var(--grey-bg-color);
+}
+
+.con-list__value:active {
+  text-decoration: underline;
+}
+
+.con-list__item:first-child .con-list__value:active {
+  text-decoration: none;
+}
 
 .footer {
   padding: 30px 0;
